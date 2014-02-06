@@ -37,6 +37,22 @@ function fight(){
 		console.log (result);
 		
 
+	}
+}
+function winnerCheck(){
+	console.log("in winnercheck");
+	var result = "No Winner";
+		if (p1Health < 1 && p2Health <1){
+			result = "You Both Die";
+		} else if ( p1Health <1){
+			result = p2Name + " WINS!!!"
+		} else if ( p2Health <1){
+			result = p1Name + " WINS!!!"
+		}
+		return result;
+		console.log (result);
+	
+}
 console.log ("start program");
 fight();
 
