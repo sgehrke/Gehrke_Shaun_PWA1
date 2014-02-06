@@ -36,7 +36,12 @@ function fight(){
 		var result = winnerCheck();
 		console.log (result);
 		
-
+		if (result === "No Winner"){
+		alert(p1Name + ":" + p1Health + " *ROUND " + round + " OVER* " + p2Name + ":" + p2Health);
+		} else {
+			alert(result);
+			break;
+		}
 	}
 }
 function winnerCheck(){
