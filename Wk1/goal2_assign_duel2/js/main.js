@@ -36,16 +36,16 @@ var round = 0;
 function fight(){
 	console.log ("this is the function fight");
 	
-	alert(p1Name + ":" + p1Health + " *START* " + p2Name + ":" + p2Health);
+	alert(p1Array[0] + ":" + p1Array[1] + " *START* " + p2Array[0] + ":" + p2Array[1]);
 //The for loop contains a math.floor which round down to the nearest integer
 	for (i=0; i<10; i++){
-		var p1minDamage = p1maxDamage * .5;
-		var p2minDamage = p2maxDamage * .5;
-		var p1Damage = Math.floor(Math.random()*(p1maxDamage - p1minDamage) + p1minDamage);
-		var p2Damage = Math.floor(Math.random()*(p2maxDamage - p2minDamage) + p2minDamage);
+		var p1minDamage = p1Array[2] * .5;
+		var p2minDamage = p2Array[2] * .5;
+		var p1Damage = Math.floor(Math.random()*(p1Array[2] - p1minDamage) + p1minDamage);
+		var p2Damage = Math.floor(Math.random()*(p2Array[2] - p2minDamage) + p2minDamage);
 		
-		p1Health -= p1Damage;
-		p2Health -= p2Damage;
+		p1Array[1] -= p1Damage;
+		p2Array[1] -= p2Damage;
 	//	console.log (p1Damage);
 	//	console.log (p1Damage);
 	//	console.log ("p1: " + p1Health);
