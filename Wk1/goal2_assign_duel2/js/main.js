@@ -52,7 +52,7 @@ function fight(){
 	//	console.log ("p2: " + p2Health);
 	//Round ++ will add one to the round each time through the loop
 		round++
-		console.log(p1Name + ":" + p1Health + " *ROUND " + round + " OVER* " + p2Name + ":" + p2Health);
+		console.log(p1Array[0] + ":" + p1Array[1] + " *ROUND " + round + " OVER* " + p2Array[0] + ":" + p2Array[1]);
 
 //This var catches the result of the winnersCheck() Function
 		var result = winnerCheck();
@@ -60,7 +60,7 @@ function fight(){
 
 //This conditional will run after the winnercheck and the result is input to see what will run		
 		if (result === "No Winner"){
-		alert(p1Name + ":" + p1Health + " *ROUND " + round + " OVER* " + p2Name + ":" + p2Health);
+		alert(p1Array[0] + ":" + p2Array[1] + " *ROUND " + round + " OVER* " + p2Array[0] + ":" + p2Array[1]);
 		} else {
 			alert(result);
 			break;
