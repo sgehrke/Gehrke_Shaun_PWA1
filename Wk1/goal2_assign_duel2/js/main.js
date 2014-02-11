@@ -7,28 +7,7 @@ Assignment: The Duel - Part 2
 var p1Array = ["Kabal", 100, 15];
 var p2Array = ["Kratos", 100, 15];
 
-/*
-********************************** Info now contained in an Array *******
-//Player one name and health
-var p1Name = "Kabal";
-var p1Health = 100;
 
-//Player two name and health
-var p2Name = "Kratos";
-var p2Health = 100;
-
-//Player maximum damage
-var p1maxDamage = 15;
-var p2maxDamage = 15;
-*/
-/*
-**************************************** Moved inside the function ********
-//Player minimum damage 
-var p1minDamage = p1maxDamage * .5;
-var p2minDamage = p2maxDamage * .5;
-*/
-
-//The round of the fight with ++ later that will start the round at 1
 var round = 0;
 
 
@@ -46,11 +25,7 @@ function fight(){
 		
 		p1Array[1] -= p1Damage;
 		p2Array[1] -= p2Damage;
-	//	console.log (p1Damage);
-	//	console.log (p1Damage);
-	//	console.log ("p1: " + p1Health);
-	//	console.log ("p2: " + p2Health);
-	//Round ++ will add one to the round each time through the loop
+	
 		round++
 		console.log(p1Array[0] + ":" + p1Array[1] + " *ROUND " + round + " OVER* " + p2Array[0] + ":" + p2Array[1]);
 
@@ -72,12 +47,12 @@ function fight(){
 function winnerCheck(){
 	console.log("in winnercheck");
 	var result = "No Winner";
-		if (p1Health < 1 && p2Health <1){
+		if (p1Array[1] < 1 && p2Array[1] <1){
 			result = "You Both Die";
-		} else if ( p1Health <1){
-			result = p2Name + " WINS!!!"
-		} else if ( p2Health <1){
-			result = p1Name + " WINS!!!"
+		} else if ( p1Array[1] <1){
+			result = p2Array[0] + " WINS!!!"
+		} else if ( p2Array[1] <1){
+			result = p2Array[0] + " WINS!!!"
 		}
 		return result;
 		console.log (result);
