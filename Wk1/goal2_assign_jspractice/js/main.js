@@ -100,3 +100,96 @@ console.log (characters)
 
 
 
+/* problem 5 
+create a function named 'vowelsInWord'
+- accept 1 parameter into the function that is a a one word string
+- return the number of vowels in the word
+- console.log the answer outside of the function
+*/
+
+
+console.log("***************************************************problem5")
+var word = "aeiou";
+
+/*
+
+function vowelInWord(str) {
+	console.log (str)
+    return --(str.split(/[aeiou]/).length);
+}
+
+var vow = vowelInWord(word);
+console.log (vow);
+*/
+
+var counter = 0
+console.log (counter);
+
+
+function vowelsInWord(vowels){
+
+	var counter = 0
+	console.log (counter);
+	
+	
+	for ( var i=0, x=vowels.length; i<x; i++){
+	var vowelsArray = vowels.split("");
+	console.log(vowelsArray)
+	console.log(vowelsArray[i])
+		
+		switch (vowelsArray[i]) {
+			case "a": 
+				counter++;
+				break;
+			case "e": 
+				counter++;
+				break;
+			case "i": 
+				counter++;
+				break;
+			case "o": 
+				counter++;
+				break;
+			case "u": 
+				counter++;
+				break;
+		} 
+	} return counter;
+}
+
+var vowelCount = vowelsInWord(word);
+console.log (vowelCount);
+
+
+
+
+
+
+/******************************************************* problem 6
+create a function named 'findNum'
+- accepts 2 parameters into the function - 1. array of numbers, 2. boolean
+- if the second parameter being passed is "false" or null then
+ - create an array with all of the odd numbers from the array
+- else
+ - create an array with all of the even numbers from the array
+- return the array
+- console.log the answer outside of the function
+*/
+/*
+var array = [6,8,3,2,2,8,0];
+var falseBoolean = if (false){
+	var arrayOdd = [1,3,5,7,9]
+} else {
+	var arrEven = [2,4,6,8,0];
+}
+
+function findNum(a,b){
+	return foundNum;
+	
+}
+
+var foundNum = findNum(array, falseBoolean);
+console.log (foundNum);
+*/
+
+
