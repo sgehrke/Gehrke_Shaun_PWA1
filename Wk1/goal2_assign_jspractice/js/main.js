@@ -5,7 +5,7 @@ Assignment: Goal2 - jspractice
 */
 
 
-//***************************************** problem 1 
+console.log("********************************************** problem 1");
 /*
 create a function named 'avgNumbers'
 - accept 1 parameter into the function that will be an array of unlimited numbers
@@ -15,7 +15,7 @@ create a function named 'avgNumbers'
 */
 
  
-var arrayNumbers = [1,1,6,8,2,7,8,2,5,9]
+var arrayNumbers = [1,1,6,8,2,7,8,2,5,9];
 
 function avgNumbers(array){
 	var total = 0;
@@ -32,7 +32,7 @@ console.log (average);
 
 
 
-//*****************************************problem 2 'fullName'
+console.log("********************************************** problem 2");
 /*
 create a function named 'fullName'
 - accept 2 parameters into the function that are strings (firstname and lastname)
@@ -54,7 +54,7 @@ console.log (name);
 
 
 
-//******************************************problem 3 'wordCount'
+console.log("********************************************** problem 3");
 /*
 create a function named 'wordCount'
 - accept 1 parameter into the function that is a long string of text words
@@ -66,8 +66,8 @@ create a function named 'wordCount'
 var wordString = "This is a test to see if my function can come up with the result 16.";
 
 function wordCount(string){
-	var words = string.split(" ");
-	return words.length;
+	var words = string.split(" ").length;
+	return words;
 }
 
 var words = wordCount(wordString);
@@ -77,7 +77,7 @@ console.log (words);
 
 
 
-//*******************************************problem 4 'charCount'
+console.log("********************************************** problem 4");
 /*
 create a function named 'charCount'
 - accept 1 parameter into the function that is a long string of text
@@ -85,20 +85,21 @@ create a function named 'charCount'
 - console.log the answer outside of the function
 */
 
-var longString = "alkbosdhfbhsdbfiebcniabsdgk"
+var longString = "alkbosdhfbhsdbfiebcniabsdgk";
 
 function charCount(text){
-	var text = longString.length
+	var text = longString.length;
 	return text;
 	
 	
 }
 
 var characters = charCount(longString);
-console.log (characters)
+console.log (characters);
 
 
 
+console.log("********************************************** problem 5");
 
 /* problem 5 
 create a function named 'vowelsInWord'
@@ -108,9 +109,8 @@ create a function named 'vowelsInWord'
 */
 
 
-console.log("***************************************************problem5")
-var word = "vowel";
-var counter = 0
+var word = "aeiou";
+var counter = 0;
 
 function vowelsInWord(vowels){
 
@@ -157,20 +157,27 @@ create a function named 'findNum'
 
 */
 
-var array = [6,8,3,2,2,8,0];
-var falseBoolean = true;
+var array = [1,2,3,4,5,6,7,8,9];
+var falseBoolean = false;
 
-function findNum(a,b){
-	if (b === false){
-	var b = [2,4,6,8];
-	return b;
-	} else {
-		var b = [1,3,5,7,9];
-		return b;
-	}
+function findNum(myArray, myBoolean){
+	var odd = [];
+	var even = [];
 	
-	
+	for ( var i=0; i< myArray.length; i++){
+	    if(i % 2 === 0) {
+       		odd.push(myArray[i]);
+		} else { 
+			even.push(myArray[i]);		
+		}
 }
+	if (myBoolean === false){
+		return odd;
+	} else {
+		return even;
+	}
+}
+
 
 var foundNum = findNum(array, falseBoolean);
 console.log (foundNum);
