@@ -157,8 +157,8 @@ create a function named 'findNum'
 
 */
 
-var array = [1,2,3,4,5,6,7,8,9];
-var falseBoolean = false;
+var myarray = [1,2,3,4,5,6,7,8,9];
+var myBoolean = false;
 
 function findNum(myArray, myBoolean){
 	var odd = [];
@@ -171,15 +171,16 @@ function findNum(myArray, myBoolean){
 			even.push(myArray[i]);		
 		}
 }
-	if (myBoolean === false){
-		return odd;
-	} else {
+
+	if (myBoolean){
 		return even;
+	} else {
+		return odd;
 	}
 }
 
 
-var foundNum = findNum(array, falseBoolean);
+var foundNum = findNum(myarray, myBoolean);
 console.log (foundNum);
 
 
